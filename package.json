@@ -1,21 +1,24 @@
 {
-  "name": "fastrak-ai-gateway",
-  "version": "2.0.0",
+  "name": "fastrak-respondio-ai-gateway",
+  "version": "1.0.0",
   "private": true,
+  "description": "Ready-to-deploy Respond.io external AI gateway for Fastrak using OpenAI or Groq-hosted Llama.",
+  "main": "src/server.js",
   "type": "module",
-  "description": "FASTRAK Respond.io to OpenAI customer communication gateway",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20 <23"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "openai": "^5.0.0"
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "openai": "^5.12.2",
+    "zod": "^3.25.76"
   }
 }

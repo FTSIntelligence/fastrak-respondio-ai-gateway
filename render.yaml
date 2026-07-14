@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: fastrak-respondio-ai-gateway
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: AI_PROVIDER
+        value: openai
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5-mini
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: GATEWAY_SECRET
+        generateValue: true
+      - key: REQUEST_TIMEOUT_MS
+        value: "8500"
+      - key: MAX_OUTPUT_TOKENS
+        value: "450"
+      - key: LOG_LEVEL
+        value: info
