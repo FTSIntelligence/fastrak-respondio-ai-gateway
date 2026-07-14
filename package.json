@@ -1,24 +1,29 @@
 {
   "name": "fastrak-ai-gateway",
   "version": "1.0.0",
-  "description": "Fastrak AI Gateway for Respond.io and OpenAI",
+  "description": "External AI gateway connecting Respond.io to OpenAI",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
+  "keywords": [
+    "respond.io",
+    "openai",
+    "fastrak",
+    "customer-service"
+  ],
+  "author": "Fastrak",
+  "license": "UNLICENSED",
   "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^16.6.1",
-    "express": "^4.22.2",
-    "express-rate-limit": "^8.5.2",
-    "helmet": "^8.3.0",
-    "openai": "^4.104.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^5.0.0",
+    "express-rate-limit": "^7.0.0",
+    "helmet": "^8.0.0",
+    "openai": "^5.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.0.0"
   }
 }
